@@ -10,7 +10,6 @@ html {
 
 .page {
   inline-size: 1200px;
-  max-height: 800px;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -43,11 +42,10 @@ ol {
 
 .content {
   width: 1140px;
-  height: 456px;
   margin: auto;
   display: flex;
   gap: 30px;
-  margin-top: 133px;
+  vertical-align: middle;
 }
 
 .content__accent {
@@ -60,9 +58,9 @@ ol {
 
 .result__video-container {
   width: 711px;
-  height: 480px;
-  padding-bottom: 16px;
-  padding-top: 78px;
+  height: 386px;
+  margin-bottom: 16px;
+  margin-top: 78px;
   position: relative;
 }
 
@@ -77,16 +75,14 @@ ol {
 .title {
   font-size: 75px;
   line-height: 70.5px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   text-transform: uppercase;
   position: fixed;
-  top: 133px;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  width: 711px;
   align-items: flex-end;
 }
 
@@ -100,13 +96,14 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  height: 54px;
   width: 222px;
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  margin-bottom: 5px;
+ 
 }
 
 .search-form__fieldset {
@@ -122,8 +119,8 @@ ol {
   width: 225px;
   border: none;
   line-height: 21.6px;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  border-bottom: 1px solid currentColor;
+  border-top: 1px solid currentColor;
 }
 
 .search-form__label .search-form__pseudo-checkbox {
@@ -178,7 +175,7 @@ textarea:focus,
 .search-form__label:has(:focus-visible),
 .button:focus-visible,
 input:focus-visible,
-.more-button:focus {
+.button:focus {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -200,14 +197,16 @@ input:focus-visible,
   ); /* это свойство обрезает видимую область до нулевого значения */
   overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */
 }
-*/ .content__video-card-title {
-  font-family: "Oswald";
+
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
-  padding-left: 1px;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 
 .content__video-card-description {
@@ -215,23 +214,25 @@ input:focus-visible,
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: normal;
   line-height: 16.2px;
-  position: relative;
   text-transform: none;
   width: 200px;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 
 .content__card-link {
   text-decoration: none;
   color: #fff;
   display: block;
-  text-transform: uppercase;
-  margin: 2px;
+  text-transform: uppercase;  
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   margin: 2px;
+  object-position: center;
+  object-fit: cover;
 }
 
 .content__list {
@@ -252,7 +253,7 @@ input:focus-visible,
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .button {
@@ -261,7 +262,7 @@ input:focus-visible,
   font-size: 18px;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   cursor: pointer;
 }
 
@@ -296,4 +297,9 @@ input:focus-visible,
 
 .content__card-link_current {
   background-color: #545050;
+}
+
+.error__title,
+h2 {
+  font-weight: 400;
 }
