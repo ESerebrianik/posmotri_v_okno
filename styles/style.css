@@ -179,6 +179,7 @@ textarea:focus,
 .search-form__textfield {
   color: #fff;
   min-height: 27px;
+  border-block: 1px solid #fff;
 }
 
 .search-form__label:has(:focus-visible),
@@ -187,6 +188,11 @@ input:focus-visible,
 .button:focus {
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+
+.search-form__label:has(.search-form__textfield:active) {
+  outline: none;
+
 }
 
 .content__card-link:focus-visible {
